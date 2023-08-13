@@ -1,6 +1,6 @@
 class CatsController < ApplicationController
   before_action :set_cat, only: [:show, :edit, :update, :destroy]
-  ##attr_accessor :name
+  ##aattr_accessor :name
   ## new test
   def show
     @cat = Cat.find(params[:id])
