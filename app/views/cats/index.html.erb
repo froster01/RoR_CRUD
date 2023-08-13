@@ -1,0 +1,34 @@
+<h1> List of Animal Cat </h1>
+
+<% if @cats.any? %>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Species</th>
+            <th>Colour</th>
+            <th>Price</th>
+        </tr>
+        <% @cats.each do |cat| %>
+        <tr>
+            <td><%= cat.name %></td>
+            <td><%= cat.species %></td>
+            <td><%= cat.colour %></td>
+            <td><%= cat.price %></td>
+            <td>
+                <%= link_to 'Show', cat_path(cat) %>
+                <%= link_to 'Edit', edit_cat_path(cat) %>
+                <%= link_to 'Delete', cat_path(cat), data: { "turbo-method": :delete } %>
+            </td>
+        </tr>
+        <%end%>
+    </table>
+<% else %>
+<p>No Cats animal found in here!</p>
+<%end%>
+<br>
+<%= link_to 'New', new_cat_path %>
+
+
+<p>lorem ipsum bla bla lorem ipsum bla blalorem ipsum bla blalorem ipsum bla blalorem ipsum bla blalorem ipsum bla blalorem ipsum bla blalorem ipsum bla bla
+lorem ipsum bla blalorem ipsum bla blalorem ipsum bla blalorem ipsum bla blalorem ipsum bla blalorem ipsum bla blalorem ipsum bla blalorem ipsum bla blalorem ipsum bla blalorem ipsum bla bla
+lorem ipsum bla blalorem ipsum bla blalorem ipsum bla blalorem ipsum bla bla

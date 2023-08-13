@@ -1,0 +1,21 @@
+<%= form_with(model: @cat, id: "cat-form") do |f| %>
+    <div>
+        <%= f.label :Name %>
+        <%= f.text_field :name%>
+    </div>
+    <div>
+        <%= f.label :Species %>
+        <%= f.text_field :species %>
+    </div>
+    <div>
+        <%= f.label :Colour %>
+        <%= f.text_field :colour %>
+    </div>
+    <div>
+        <%= f.label :Price %>
+        <%= f.text_field :price %>
+    </div>
+    <div>
+        <%= f.submit 'Submit' %>
+    </div>
+<%end%>
